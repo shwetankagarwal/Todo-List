@@ -7,6 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     tasks.forEach((task) => renderTask(task));
 
+    window.addEventListener("keydown", function (event) {
+        // Check if the pressed key is "Enter"
+        if (event.key === "Enter") {
+            // Trigger the button's click event
+            addTaskButton.click();
+        }
+    });
+
     addTaskButton.addEventListener("click", () => {
         const taskText = todoInput.value.trim();
         if (taskText === "") return;
@@ -19,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         tasks.push(newTask);
         saveTasks();
+        renderTask(newTask);
         todoInput.value = "";
         console.log(tasks);
     });
