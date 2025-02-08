@@ -13,7 +13,7 @@ body {
     background-color: #282828;
     border-radius: 18px;
     padding: 20px;
-    width: 400px;
+    /* width: 400px; */
 }
 h1{
     text-align: center;
@@ -22,40 +22,61 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 #todo-input{
     background-color: #383838;
-    padding: 20px;
+    padding: 15px;
     border-radius: 18px;
     border: none;
     font-size: 18px;
     color: #e0dfc8;
+    height: 100%;
+    margin-right: 5px;
 }
 #todo-input:focus{
     outline: none;
 }
 #add-task-btn{
     cursor: pointer;
-    padding: 20px;
+    padding: 15px;
     border-radius: 18px;
     background-color: #2274a5;
     color: #e0dfc8;
     font-size: 18px;
     border: none;
+    white-space: nowrap;
 }
 #add-task-btn:hover{
-    background-color: #4d9de0;
+    background-color: #003049;
 }
 ul{
     padding: 0;
     /* margin: 15px; */
 }
 li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    /* display: block; */
-    padding: 20px;
+    padding: 10px;
     background-color:#383838;
     border-radius: 18px;
     font-size: 18px;
     margin-bottom: 15px;
+}
+ul button{
+    cursor: pointer;
+    background-color: #b50000;
+    padding: 10px;
+    color: #e0dfc8;
+    border-radius: 9px;
+    border: none;
+}
+ul button:hover{
+    background-color: #ff0004;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.8;
 }
